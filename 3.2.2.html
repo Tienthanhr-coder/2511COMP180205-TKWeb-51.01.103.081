@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Giá hoa quả</h1>
+    <input type="text" id="name"> <button onclick="CheckValue()">Xem giá</button>
+    <p> </p>
+    <div id="result"></div>
+    <script>
+        function CheckValue(){
+            let ten = document.getElementById('name').value;
+            switch(ten){
+                case'Ổi': 
+                    document.getElementById('result').innerHTML="20000 VND/kg";
+                break;
+                case'Dưa hấu': 
+                    document.getElementById('result').innerHTML="20000 VND/kg";
+                break;
+                case'Táo':
+                    document.getElementById('result').innerHTML="30000VND/kg";
+                break;
+                case'Cam':
+                    document.getElementById('result').innerHTML="40000VND/kg";
+                break;
+                case'Chôm Chôm': 
+                    document.getElementById('result').innerHTML="400000 VND/kg";
+                break;
+                case'Măng Cụt': 
+                    document.getElementById('result').innerHTML="500000 VND/kg";
+                break;
+                default:
+                    document.getElementById('result').innerHTML="Sản phảm này hết hàng";
+            }
+        }
+    </script>
+    </script>
+</body>
+</html>

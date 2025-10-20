@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách</title>
+    <style>
+        .box{
+            border: none;
+            border-radius: 5px;
+            background-color: gainsboro;
+            padding: 20px;
+            display: inline;
+        }
+        button{
+            background-color: rgb(192, 190, 190);
+        }
+        input{
+            width: 250px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        th, td {
+            border: none;
+            padding: 10px;
+            text-align: left;
+        }
+        #Showproductlist tr:nth-child(even) {
+            background-color: #d3cfcf;
+        }
+        #Showproductlist tr:nth-child(odd) {
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+<body onload="Showproduct()">
+    <h2 style="margin-bottom: 30px;">Thêm sản phẩm</h2>
+    <div class="box">
+        <input type="text" id="Addproduct" placeholder="Nhập tên sản phẩm...">
+        <button onclick="addproduct()">Thêm</button>
+    </div>
+    <h2 style="margin-bottom: 45px; margin-top: 30px;">Danh sách sản phẩm</h2>
+    <h3><b>Tên sản phẩm</b><b style="float: right;"><span id="Productcount">0</span> sản phẩm</b></h3>
+    <table id="Showproductlist"></table>
+    <script>
+        let productlist = ['Sonic Xperia', 'Samsung Galactos', 'Nokia Tanky', 'Xiaomi Redmi Note Book', 'Toji Apple iPhone', 'Xiaomi Plus'];
+
+        function Showproduct() {
+            let table = `
+                <tr>
+                    <th> </th>
+                    <th> </th>
+                    <th> </th>
+                </tr>
+            `;
+            
+            let i = 0;
+
+            for (i = 0; i < productlist.length; i++) {
+                table += `
+                <tr>
+                    <td>${productlist[i]}</td>
+                    <td><button class="edit-button" onclick="editproduct(${i})">Edit</button></td>
+                    <td><button class="delete-button" onclick="deleteproduct(${i})">Delete</button></td>
+                </tr>
+                `;
+            }
+
+            document.getElementById('Showproductlist').innerHTML = table;
+            document.getElementById('Productcount').innerText = `${productlist.length}`;
+        }
+
+        function Addproduct() {
+            let newProduct = document.getElementById('Addproduct').value.trim();
+            if (newProduct == '') {
+                alert('Vui lòng nhập tên sản phẩm!');
+                return;
+            }
+            productlist.push(newProduct);
+            document.getElementById('Addproduct').value = '';
+            showproduct();
+        }
+
+        function Editproduct(index) {
+            let newName = prompt('Nhập tên mới cho sản phẩm:', productlist[index]);
+            if (newName !== null && newName.trim() !== '') {
+                productlist[index] = newName.trim();
+                Showproduct();
+            }
+        }
+
+        function Deleteproduct(index) {
+            if (confirm(`Bạn có chắc muốn xóa "${productlist[index]}" không?`)) {
+                productlist.splice(index, 1);
+                Showproduct();
+            }
+        }
+    </script>
+</body>
+</html>

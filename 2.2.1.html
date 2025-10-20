@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <style>
+        .menu{
+            background-color: gray;
+            width: 1200px;
+            height: 50px;
+            display: inline-block;
+        }
+        .menu li{
+            list-style-type: none;
+            float: left;
+        }
+        .menu li a{
+            text-decoration: none;
+            color: black;
+            padding: 16px;
+        }
+        .menu li a:hover{
+            background-color: brown;
+            border-bottom: 1 px gray solid;
+            color: beige;
+            text-align: center;
+        }
+        h1{text-align: center;}
+        .box-name{
+            text-align: center;
+        }
+        .box{
+            border: 2px solid red;
+            width: 200px;
+            height: 200px;
+            padding-left: 15px;
+            position: relative;
+            display: inline-block;
+            background-color: rgba(220, 220, 220, 0.232);
+        }
+        .box-new{
+            /* border: 2px solid green; */
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+        }
+        .box-product{
+            margin: 0 auto;
+        }
+        .box-storage{
+            /* border: 2px solid green; */
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+        }
+        .box-price{
+            /* border: 2px solid green; */
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color: brown;">MINH HỌA MENU NGANG - MỘT CẤP</h1>
+    <div class="menu">
+        <ul>
+            <li><a href="">Trang chủ</a></li>
+            <li><a href="">Giới thiệu</a></li>
+            <li><a href="">Dự án</a></li>
+            <li><a href="">Sản phẩm</a></li>
+            <li><a href="">Dịch vụ</a></li>
+            <li><a href="">Tin tức</a></li>
+            <li><a href="">Liên hệ</a></li>
+        </ul>
+    </div>
+    <div class="box">
+        <div class="box-name">Iphone 17 Promax</div>
+        <img class="box-product" src="https://iphonethanhnhan.vn/upload/product/iphone-17-pro-max-6-9245.jpg" width="180px">
+        <img class="box-new" src="https://uxwing.com/wp-content/themes/uxwing/download/e-commerce-currency-shopping/new-icon.png">
+        <img class="box-storage" src="https://cdn-icons-png.flaticon.com/512/3142/3142740.png">
+        <div class="box-price">$2000</div>
+    </div>
+</body>
+</html>
