@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Thiệp mời Lễ hội Halloween</title>
+  <link rel="icon" href="Pumpkin.ico" type="image/x-icon">
+  <link rel="stylesheet" href="halloweenstyle.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <img src="Iconcreme-Halloween-Pumpkin.512.png" alt="Logo">
+      <h1>Halloween Festival 31/10</h1>
+    </div>
+    <nav class="nav">
+      <a href="#home"><img src="Iconcreme-Halloween-Home.512.png" alt="">Trang chủ</a>
+      <a href="#team"><img src="Iconcreme-Halloween-Cat.512.png" alt="">Thành viên</a>
+      <a href="#history"><img src="Witch.ico" alt="">Lịch sử</a>
+      <a href="#products"><img src="Pumpkin.ico" alt="">Gian hàng</a>
+      <a href="#gallery"><img src="Iconcreme-Halloween-Bat.512.png" alt="">Bộ sưu tập</a>
+      <a href="#contact"><img src="Soul.ico" alt="">Liên hệ</a>
+      <a href="#register"><img src="Sea Monster.ico" alt="">Đăng ký</a>
+    </nav>
+    <button id="music-btn">Turn On/Off music</button>
+  </header>
+
+  <div class="floating">
+    <img src="Soul.ico" class="float f1">
+    <img src="Iconcreme-Halloween-Mummy.512.png" class="float f2">
+    <img src="Iconcreme-Halloween-Bat.512.png" class="float f3">
+  </div>
+
+  <main>
+    <section id="home" class="page active">
+      <h2> Thiệp mời tham dự Lễ hội Halloween </h2>
+      <p>Thời gian: <b>19:00 - 23:59, Thứ Sáu, 31/10</b></p>
+      <p>Địa điểm: <b>Trường/Địa điểm tổ chức</b></p>
+      <p>Hãy hóa trang thành nhân vật yêu thích và cùng tận hưởng đêm hội rùng rợn!</p>
+      <div class="home-icons">
+        <img src="Soul.ico" alt="">
+        <img src="Iconcreme-Halloween-Cat.512.png" alt="">
+      </div>
+      <div class="cta">
+        <a href="#register" class="btn">Đăng ký ngay</a>
+      </div>
+    </section>
+
+    <section id="team" class="page">
+      <h2> Thành viên tổ chức</h2>
+      <ul class="team">
+        <li><img src="Iconcreme-Halloween-Mummy.512.png" alt="">Nguyễn A – Trưởng nhóm</li>
+        <li><img src="Witch.ico" alt="">Trần B – Thiết kế & Trang trí</li>
+        <li><img src="Iconcreme-Halloween-Bat.512.png" alt="">Phạm C – Kỹ thuật & Âm thanh</li>
+      </ul>
+    </section>
+
+    <section id="history" class="page">
+      <h2>Lịch sử Halloween</h2>
+      <p>Halloween có nguồn gốc từ lễ Samhain của người Celt, đánh dấu sự kết thúc mùa màng và khởi đầu mùa đông lạnh giá.</p>
+      <p>Sau này, người ta hóa trang để tránh linh hồn xấu, dần dần trở thành lễ hội hóa trang vui nhộn trên khắp thế giới.</p>
+    </section>
+
+    <section id="products" class="page">
+      <h2> Gian hàng Halloween</h2>
+      <ul id="product-list">
+        <li>
+          <div class="prod-head">
+            <img src="Iconcreme-Halloween-Pumpkin.512.png" alt="">
+            <span>Bí ngô ma thuật</span>
+            <button class="toggle">Chi tiết</button>
+          </div>
+          <div class="prod-detail">Trang trí ánh sáng bên trong, giá 50.000đ.</div>
+        </li>
+        <li>
+          <div class="prod-head">
+            <img src="Iconcreme-Halloween-Cat.512.png" alt="">
+            <span>Mèo đen may mắn</span>
+            <button class="toggle">Chi tiết</button>
+          </div>
+          <div class="prod-detail">Tượng mèo đen nhỏ, dùng để trang trí bàn tiệc. Giá 30.000đ.</div>
+        </li>
+        <li>
+          <div class="prod-head">
+            <img src="Iconcreme-Halloween-Bat.512.png" alt="">
+            <span>Dơi treo phát sáng</span>
+            <button class="toggle">Chi tiết</button>
+          </div>
+          <div class="prod-detail">Dơi nhựa gắn đèn LED, phát sáng khi tắt đèn. Giá 40.000đ.</div>
+        </li>
+      </ul>
+    </section>
+
+    <section id="gallery" class="page">
+      <h2> Bộ sưu tập biểu tượng Halloween</h2>
+      <div class="gallery">
+        <img src="Iconcreme-Halloween-Pumpkin.512.png" alt="">
+        <img src="Iconcreme-Halloween-Bat.512.png" alt="">
+        <img src="Iconcreme-Halloween-Mummy.512.png" alt="">
+        <img src="Iconcreme-Halloween-Cat.512.png" alt="">
+        <img src="Soul.ico" alt="">
+        <img src="Witch.ico" alt="">
+      </div>
+    </section>
+
+    <section id="contact" class="page">
+      <h2>Liên hệ</h2>
+      <form id="contact-form">
+        <label>Họ tên <input type="text" required></label>
+        <label>Email <input type="email" required></label>
+        <label>Nội dung <textarea required></textarea></label>
+        <button type="submit" class="btn">Gửi</button>
+        <div id="contact-msg"></div>
+      </form>
+    </section>
+
+    <section id="register" class="page">
+      <h2> Đăng ký tham gia</h2>
+      <form id="reg-form">
+        <label>Họ tên <input type="text" required></label>
+        <label>Email <input type="email" required></label>
+        <label>Loại vé 
+          <select required>
+            <option value="">-- Chọn vé --</option>
+            <option>Thường - 100k</option>
+            <option>VIP - 300k</option>
+          </select>
+        </label>
+        <button type="submit" class="btn">Gửi đăng ký</button>
+        <div id="reg-msg"></div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© Halloween Festival - Thiệp mời 2025</p>
+    <img src="Iconcreme-Halloween-Twitter.512.png" alt="Twitter" width="30">
+  </footer>
+
+  <audio id="bg-music" loop>
+    <source src="spooky.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="halloqueen.js"></script>
+</body>
+</html>
