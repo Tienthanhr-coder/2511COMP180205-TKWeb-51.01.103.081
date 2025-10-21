@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
-  background: #0b0b0f;
+  background: #d69315;
   color: #fff;
   overflow-x: hidden;
 }
@@ -9,7 +9,7 @@ body {
 header {
   position: fixed;
   top: 0; left: 0; right: 0;
-  background: rgba(0,0,0,0.8);
+  background: rgb(140, 180, 29);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -44,10 +44,10 @@ main { padding-top: 80px; text-align: center; }
 .page { display: none; padding: 20px; min-height: 70vh; }
 .page.active { display: block; }
 
-h2 { color: orange; }
+h2 { color: rgb(140, 180, 29); }
 
 .btn {
-  background: orange;
+  background: rgb(140, 180, 29);
   color: #000;
   border: none;
   border-radius: 6px;
@@ -55,7 +55,7 @@ h2 { color: orange; }
   text-decoration: none;
   cursor: pointer;
 }
-.btn:hover { background: #ffb347; }
+.btn:hover { background: #a6ff00; }
 
 .team li {
   list-style: none;
@@ -120,7 +120,7 @@ input, select, textarea {
 footer {
   text-align: center;
   padding: 20px;
-  background: rgba(0,0,0,0.7);
+  background: rgb(140, 180, 29);
 }
 
 .floating img {
